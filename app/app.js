@@ -16,8 +16,10 @@ $(function() {
 
         function create(id) {
             obj = _.extend({ ID: id }, get(id));
-            console.log("create", JSON.stringify(obj));
-            isc[obj._type].create(obj);
+            type = obj._type
+            delete obj._type
+            console.log("create", type, JSON.stringify(obj));
+            isc[type].create(obj);
         };
 
         create("sc_LoginDialog");
