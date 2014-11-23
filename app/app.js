@@ -2,7 +2,7 @@ $(function() {
     $.getJSON("/ui.json", function(ui) {
 
         function get(id) {
-            obj = _.extend({ ID: id }, ui[id]);
+            obj = _.cloneDeep(ui[id]);
             extend = obj._extend;
             if (extend === undefined) {
                 extend = [];
@@ -15,11 +15,11 @@ $(function() {
         };
 
         function create(id) {
-            obj = get(id);
+            obj = _.extend({ ID: id }, get(id));
             console.log("create", JSON.stringify(obj));
             isc[obj._type].create(obj);
         };
 
-        create("LoginDialog");
+        create("sc_LoginDialog");
     });
 });

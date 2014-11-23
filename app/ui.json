@@ -1,10 +1,10 @@
 {
-    "DefaultDialog": {
+    "sc_DefaultDialog": {
         "_type": "Window",
         "autoCenter": true
     },
-    "LoginDialog": {
+    "sc_LoginDialog": {
         "title": "Login",
-        "_extend": ["DefaultDialog"]
+        "_extend": ["sc_DefaultDialog"]
     }
 }
