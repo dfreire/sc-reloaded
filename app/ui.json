@@ -1,0 +1,10 @@
+{
+    "DefaultDialog": {
+        "_type": "Window",
+        "autoCenter": true
+    },
+    "LoginDialog": {
+        "title": "Login",
+        "_extend": ["DefaultDialog"]
+    }
+}
